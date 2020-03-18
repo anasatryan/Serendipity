@@ -1,0 +1,14 @@
+stress_check = input("Are you stressed?")
+
+if(stress_check == "yes"):
+  stressor1 = input("Is your stress caused by negative thoughts?")
+  if(stressor1 == "yes"):
+    print("read motivational articles,read some books or watch movies!")
+  stressor2 = input("Are you mentally and physically overwoked?")  
+  if(stressor2 == "yes"):
+    print("try meditating, take your supplements, promote rest and mental relaxation")
+  stressor3 = input("Are you stressed because of a disease?")
+  if(stressor3 == "yes"):
+     print("Seek medical help from a professional or ask for help from your family and friends")
+  else:
+     your_stressor = input("Please provide the reason that caused your stress!")
