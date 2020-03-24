@@ -35,3 +35,29 @@ stress_level_storage = []
 
 stress_level_storage.append(stress_level)
 print(stress_level_storage)
+
+
+jsonFile
+
+import json
+jsonFile = open('stress_level.json','r')
+data = json.load(jsonFile)
+jsonFile.close()
+
+def insertStress_level():
+    for stress_level in data.items():
+        print("Please enter your stress level")
+        data[stress_level]=int(input())
+        jsonFile = open('stress_level.json','w')
+        json.dump(data,jsonFile)
+        jsonFile.close()
+        insertStress_level()
+
+{
+	"stress_level": [{
+		"stress_level": "Please enter your stress level",
+		"option1": "low",
+		"option2": "medium",
+		"option3": "high"
+	}]
+}
