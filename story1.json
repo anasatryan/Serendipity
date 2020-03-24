@@ -1,8 +1,0 @@
-{
-	"stress_level": [{
-		"stress_level": "Please enter your stress level",
-		"option1": "low",
-		"option2": "medium",
-		"option3": "high"
-	}]
-}
