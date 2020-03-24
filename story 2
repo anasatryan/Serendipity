@@ -31,3 +31,19 @@ if(stress_check == "yes"):
 		"option3": "true or false"
 	}]
 }
+
+
+import json
+jsonFile = open('stress_cause.json','r')
+data = json.load(jsonFile)
+jsonFile.close()
+
+def insertStress_cause():
+    for stress_cause in data.items():
+        print("Are you stressed?")
+        data[stress_cause]=int(input())
+        jsonFile = open('stress_cause.json','w')
+        json.dump(data,jsonFile)
+        jsonFile.close()
+        insertStress_cause()
+
