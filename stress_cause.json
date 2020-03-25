@@ -1,0 +1,14 @@
+{
+	"stress_cause": [{
+		"stress_cause": "Are you stressed?",
+
+		"stressor1": "Is your stress caused by negative thoughts?",
+		"option1": "true or false",
+		"stressor2": "Are you mentally and physically overwoked?",
+		"option2": "true or false",
+		"stressor3": "Are you stressed because of a disease?",
+		"option3": "true or false"
+	}]
+}
+
+
