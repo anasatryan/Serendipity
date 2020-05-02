@@ -1,0 +1,8 @@
+{
+  "stress_level":
+    {
+      "low": "if your stress level is lower or equal to 50",
+      "medium": "if your stress level is lower or equal to 75",
+      "high": "if your stress level is lower or equal to 100"
+    }
+}
