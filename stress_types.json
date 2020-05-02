@@ -1,0 +1,17 @@
+{
+  "negative_thoughts": {
+    "question": "Is your stress caused by negative thoughts?",
+    "recommendation": "read motivational articles,read some books or watch movies!",
+    "article": "https://www.healthline.com/health/mental-health/stop-automatic-negative-thoughts#2"
+  },
+  "overworked": {
+    "question": "Are you mentally and physically overworked?",
+    "recommendation": "try meditating, take your supplements, promote rest and mental relaxation",
+    "article": "https://www.healthline.com/health/mental-exhaustion#causes"
+  },
+  "health_issues": {
+    "question": "Are you stressed because of a disease?",
+    "recommendation": "Seek medical help from a professional or ask for help from your family and friends",
+    "article": "https://www.mentalhealth.org.uk/publications/how-manage-and-reduce-stress"
+  }
+}
