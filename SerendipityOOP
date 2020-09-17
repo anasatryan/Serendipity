@@ -1,0 +1,121 @@
+import json
+class Stress:
+
+  def __init__(self, causes, medication, recommendation):
+    self.causes=causes
+    self.medication=medication
+    self.recommendation = recommendation
+
+class AcuteStress(Stress):
+  def __init__ (self, causes, medication, recommendation):
+    super().__init__( causes,medication, recommendation)
+    self.causes = causes
+
+class Episodic(Stress):
+  def __init__ (self, causes, medication,recommendation):
+    super().__init__(causes, medication, recommendation)
+
+
+class Chronic(Stress):
+  def __init__ (self,causes, medication, recommendation):
+    super().__init__(causes,medication, recommendation)
+
+
+class medication():
+    def __init__(self, name, dosage,price,side_effects):
+        self.name = name
+        self.dosage = dosage
+        self.price = price
+        self.side_effects = side_effects
+
+    def take(self):
+        print("Take:"  + self.name)
+
+def printMed(medication):
+    print("Name:"+medication.name)
+    print("Dosage:"+medication.dosage)
+    print("Price:"+medication.price)
+    print(  "Side Effects:"+medication.side_effects)
+
+
+def stressCausesInfo(stressType):
+    with open('stress_types.json')as data_file:
+        stress1 = json.load(data_file)
+    return stress1[stressType]["causes"]
+def stressMedicationInfo(stressType):
+    with open('stress_types.json')as data_file:
+        stress1 = json.load(data_file)
+    return stress1[stressType]["medication"]
+def stressRecommendationInfo(stressType):
+    with open('stress_types.json')as data_file:
+        stress1 = json.load(data_file)
+    return stress1[stressType]["recommendation"]
+
+def getMedication(stressType):
+    return medication(stressMedicationInfo(stressType)["name"], stressMedicationInfo(stressType)["dosage"],
+                                stressMedicationInfo(stressType)["price"], stressMedicationInfo(stressType)["side_effects"])
+
+def menu():
+    print("Welcome to SERENDIPITY!")
+    print("****MAIN MENU****")
+    print("What is your stress type?")
+    print()
+
+    stressType = input ("""
+    A: Acute Stress
+    B: Episodic Stress
+    C: Chronic Stress
+
+
+    Please choose one of the options:""")
+
+    if stressType.lower()=="a":
+        causes=stressCausesInfo("acute")
+        medication1=getMedication("acute")
+        recommendation=stressRecommendationInfo("acute")
+        stress=AcuteStress(causes,medication1,recommendation)
+
+    elif stressType.lower()=="b":
+        causes = stressCausesInfo("episodic")
+        medication1 = getMedication("episodic")
+        recommendation = stressRecommendationInfo("episodic")
+        stress = Episodic(causes, medication1, recommendation)
+
+    elif stressType.lower()=="c":
+        causes = stressCausesInfo("chronic")
+        medication = medication1=getMedication("chronic")
+        recommendation = stressRecommendationInfo("chronic")
+        stress = Chronic(causes, medication, recommendation)
+
+    else:
+        print("You must only select the provided options")
+        print("Please try again!")
+        menu()
+
+    print("What do you want to know about your stress?")
+    print()
+
+    choice = input("""
+       A: Causes of your stress
+       B: Medication
+       C: Recommendation
+
+
+       Please choose one of the options:""")
+
+    if choice.lower()=="a":
+        print(stress.causes)
+
+    elif choice.lower()=="b":
+        printMed(stress.medication)
+
+    elif choice.lower()=="c":
+        print(stress.recommendation)
+
+
+def main():
+
+    menu()
+
+
+main()
