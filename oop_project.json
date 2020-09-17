@@ -1,0 +1,32 @@
+{
+  "acute": {
+    "causes": "Experiencing, witnessing, or being confronted with one or more traumatic events can cause ASD. The events create intense fear, horror, or helplessness.",
+    "medication": {
+      "name": "Citalopram",
+      "dosage" :"3 pills per day",
+      "price" : "4$",
+      "side_effects": "troubles with sleeping"
+    },
+    "recommendation": "medication to relieve symptoms of ASD, such as anti-anxiety medications, selective serotonin reuptake inhibitors (SSRIs), and antidepressants"
+  },
+  "episodic": {
+     "causes": "Episodic acute stress occurs when someone gets frequent bouts of acute stress. People with this kind of stress will oftentimes take on more responsibilities and projects than they can handle.",
+    "medication": {
+      "name": "Prozac",
+      "dosage" :"1 pill per day",
+      "price" : "4$",
+      "side_effects": "loss of appetite"
+    },
+    "recommendation": "One form of therapy that works very well in dealing with stress is Cognitive Behavioral Therapy, or CBT"
+  },
+  "chronic": {
+   "causes": "Many factors can trigger a stress response, including dangerous situations and psychological pressures, such as work deadlines, exams, and sporting events",
+    "medication": {
+      "name": "Celexa",
+      "dosage" :"2 pills per day",
+      "price" : "4.30$",
+      "side_effects": "irritability"
+    },
+    "recommendation": "It is important to see a healthcare professional for advice and support. A doctor may recommend psychological therapy, such as cognitive behavioral therapy (CBT)"
+  }
+}
